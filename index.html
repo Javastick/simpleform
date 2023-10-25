@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Please take a few minutes to complete this survey.</p>
+        </div>
+        <form id="survey-form">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="number" id="number-label">Age:</label>
+            <input type="number" id="number" placeholder="Enter your age" min="18" max="100" required>
+
+            <label for="dropdown">How did you hear about us?</label>
+            <select id="dropdown">
+                <option value="none">Select</option>
+                <option value="friend">From a friend</option>
+                <option value="search">Online search</option>
+                <option value="ad">Advertisement</option>
+                <option value="other">Other</option>
+            </select>
+
+            <fieldset>
+                <legend>Have you used our products before?</legend>
+                <input type="radio" name="product" value="yes" id="yes">
+                <label for="yes" class="radlab">Yes</label>
+                <input type="radio" name="product" value="no" id="no">
+                <label for="no" class="radlab">No</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What products are you interested in?</legend>
+                <label><input type="checkbox" name="interests" value="product1">Product 1</label>
+                <label><input type="checkbox" name="interests" value="product2">Product 2</label>
+                <label><input type="checkbox" name="interests" value="product3">Product 3</label>
+            </fieldset>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" placeholder="Enter your comments here"></textarea>
+
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
